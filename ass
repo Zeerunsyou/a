@@ -249,11 +249,11 @@ task.spawn(C_11);
 -- StarterGui.Reave.MainFrame.Close.CloseScript
 local function C_15()
 local script = G2L["15"];
-	local gui = script.Parent.Parent.Parent
+	local gui = script.Parent.Parent
 	local button = script.Parent
 	
 	button.MouseButton1Click:Connect(function()
-		gui:Destroy()
+		gui.Visible = false
 	end)
 end;
 task.spawn(C_15);
