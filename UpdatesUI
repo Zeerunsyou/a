@@ -25,6 +25,7 @@ G2L["2"]["Size"] = UDim2.new(0, 570, 0, 306);
 G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Name"] = [[MainFrame]];
+G2L["2"]["Visible"] = false
 
 
 -- StarterGui.Reave.MainFrame.CreditsFrame
