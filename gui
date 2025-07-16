@@ -1,0 +1,225 @@
+local G2L = {};
+
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Reave]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
+G2L["2"]["Size"] = UDim2.new(0, 570, 0, 306);
+G2L["2"]["Position"] = UDim2.new(0.28022, 0, 0.28591, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[MainFrame]];
+
+
+G2L["3"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["3"]["Active"] = true;
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["3"]["Name"] = [[CreditsFrame]];
+G2L["3"]["Size"] = UDim2.new(0, 386, 0, 284);
+G2L["3"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Position"] = UDim2.new(0.30351, 0, 0.03595, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+G2L["4"] = Instance.new("UICorner", G2L["3"]);
+G2L["4"]["CornerRadius"] = UDim.new(0, 4);
+
+
+G2L["5"] = Instance.new("TextLabel", G2L["3"]);
+G2L["5"]["TextWrapped"] = true;
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["TextSize"] = 30;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["BackgroundTransparency"] = 1;
+G2L["5"]["Size"] = UDim2.new(0, 260, 0, 50);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Text"] = [[Official Release!]];
+G2L["5"]["Name"] = [[Release]];
+
+
+G2L["6"] = Instance.new("TextLabel", G2L["3"]);
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["TextSize"] = 30;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["BackgroundTransparency"] = 1;
+G2L["6"]["Size"] = UDim2.new(0, 260, 0, 50);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[1.0]];
+G2L["6"]["Name"] = [[1.0]];
+G2L["6"]["Position"] = UDim2.new(0.395, 0, 0, 0);
+
+
+G2L["7"] = Instance.new("Frame", G2L["2"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["7"]["Size"] = UDim2.new(0, 150, 0, 284);
+G2L["7"]["Position"] = UDim2.new(0.0193, 0, 0.03595, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Name"] = [[Profile]];
+
+
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+G2L["8"]["CornerRadius"] = UDim.new(0, 7);
+
+
+G2L["9"] = Instance.new("Frame", G2L["7"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
+G2L["9"]["Size"] = UDim2.new(0, 90, 0, 90);
+G2L["9"]["Position"] = UDim2.new(0.2, 0, 0.06338, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Name"] = [[HeadImage]];
+
+
+G2L["a"] = Instance.new("UICorner", G2L["9"]);
+G2L["a"]["CornerRadius"] = UDim.new(0, 100);
+
+
+G2L["b"] = Instance.new("ImageLabel", G2L["9"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["b"]["Size"] = UDim2.new(0, 80, 0, 80);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["Position"] = UDim2.new(0.05556, 0, 0.05556, 0);
+
+
+G2L["c"] = Instance.new("UICorner", G2L["b"]);
+G2L["c"]["CornerRadius"] = UDim.new(0, 100);
+
+
+G2L["d"] = Instance.new("LocalScript", G2L["b"]);
+G2L["d"]["Name"] = [[SetImage]];
+
+
+G2L["e"] = Instance.new("TextLabel", G2L["7"]);
+G2L["e"]["TextWrapped"] = true;
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextSize"] = 30;
+G2L["e"]["TextScaled"] = true;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["BackgroundTransparency"] = 1;
+G2L["e"]["Size"] = UDim2.new(0, 135, 0, 32);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[Username]];
+G2L["e"]["Name"] = [[DisplayName]];
+G2L["e"]["Position"] = UDim2.new(0.04667, 0, 0.40493, 0);
+
+
+G2L["f"] = Instance.new("LocalScript", G2L["e"]);
+G2L["f"]["Name"] = [[SetDisplay]];
+
+
+G2L["10"] = Instance.new("TextLabel", G2L["7"]);
+G2L["10"]["TextWrapped"] = true;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["TextSize"] = 30;
+G2L["10"]["TextScaled"] = true;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["BackgroundTransparency"] = 1;
+G2L["10"]["Size"] = UDim2.new(0, 122, 0, 25);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Text"] = [[Username]];
+G2L["10"]["Name"] = [[Username]];
+G2L["10"]["Position"] = UDim2.new(0.08667, 0, 0.53873, 0);
+
+
+G2L["11"] = Instance.new("LocalScript", G2L["10"]);
+G2L["11"]["Name"] = [[SetUser]];
+
+
+G2L["12"] = Instance.new("UICorner", G2L["2"]);
+G2L["12"]["CornerRadius"] = UDim.new(0, 7);
+
+
+G2L["13"] = Instance.new("TextButton", G2L["2"]);
+G2L["13"]["TextWrapped"] = true;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["TextScaled"] = true;
+G2L["13"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["13"]["Size"] = UDim2.new(0, 121, 0, 35);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[Close]];
+G2L["13"]["Name"] = [[Close]];
+G2L["13"]["Position"] = UDim2.new(0.04386, 0, 0.80719, 0);
+
+
+G2L["14"] = Instance.new("UICorner", G2L["13"]);
+
+
+
+G2L["15"] = Instance.new("LocalScript", G2L["13"]);
+G2L["15"]["Name"] = [[CloseScript]];
+
+
+local function C_d()
+local script = G2L["d"];
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local userId = player.UserId
+	
+	local imageLabel = script.Parent
+	
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	imageLabel.Image = content
+	
+end;
+task.spawn(C_d);
+local function C_f()
+local script = G2L["f"];
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local playerName = player.DisplayName
+	
+	local userLabel= script.Parent
+	
+	userLabel.Text = playerName
+end;
+task.spawn(C_f);
+local function C_11()
+local script = G2L["11"];
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local playerName = player.Name
+	
+	local userLabel= script.Parent
+	
+	userLabel.Text = "@" .. playerName
+end;
+task.spawn(C_11);
+local function C_15()
+local script = G2L["15"];
+	local gui = script.Parent.Parent
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		gui.Visible = false
+	end)
+end;
+task.spawn(C_15);
+
+return G2L["1"], require;
