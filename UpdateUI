@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 21 | Scripts: 4 | Modules: 0 | Tags: 0
+-- Instances: 22 | Scripts: 5 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.Reave
@@ -18,11 +18,11 @@ G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
 -- StarterGui.Reave.MainFrame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["Visible"] = false
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
+G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["2"]["Size"] = UDim2.new(0, 570, 0, 306);
-G2L["2"]["Position"] = UDim2.new(0, 0, 0, 0);
+G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Name"] = [[MainFrame]];
 
@@ -202,6 +202,11 @@ G2L["15"] = Instance.new("LocalScript", G2L["13"]);
 G2L["15"]["Name"] = [[CloseScript]];
 
 
+-- StarterGui.Reave.MainFrame.LocalScript
+G2L["16"] = Instance.new("LocalScript", G2L["2"]);
+
+
+
 -- StarterGui.Reave.MainFrame.Profile.HeadImage.ImageLabel.SetImage
 local function C_d()
 local script = G2L["d"];
@@ -250,13 +255,63 @@ task.spawn(C_11);
 -- StarterGui.Reave.MainFrame.Close.CloseScript
 local function C_15()
 local script = G2L["15"];
-	local gui = script.Parent.Parent
+	local gui = script.Parent.Parent.Parent
 	local button = script.Parent
 	
 	button.MouseButton1Click:Connect(function()
-		gui.Visible = false
+		gui:Destroy()
 	end)
 end;
 task.spawn(C_15);
+-- StarterGui.Reave.MainFrame.LocalScript
+local function C_16()
+local script = G2L["16"];
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent -- the UI element to drag
+	
+	local dragging = false
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+	
+end;
+task.spawn(C_16);
 
 return G2L["1"], require;
